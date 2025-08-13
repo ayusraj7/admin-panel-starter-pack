@@ -33,6 +33,7 @@ export const darkTheme = createTheme({
     background: {
       default: '#121212',
       paper: '#1e1e1e',
+      tableHeader: 'oklch(13% 0.028 261.692)', 
     },
     text: {
       primary: '#ffffff',

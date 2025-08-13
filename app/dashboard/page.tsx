@@ -3,7 +3,7 @@ import { Container, Typography, Paper, Box } from '@mui/material';
 import { useEffect,useState } from 'react';
 import TitleContainer from '../../common/TitleContainer';
 import CustomTable from '../../common/CustomTable';
-const columns = [
+const columns : any = [
   { id: 'name', label: 'Name', minWidth: 170 },
   { id: 'code', label: 'ISO Code', minWidth: 100 },
   {
@@ -30,7 +30,7 @@ const columns = [
 ];
 
 // Client-side sample data
-function createData(name: string, code: string, population: number, size: number): Country {
+function createData(name: string, code: string, population: number, size: number) {
   return { name, code, population, size, density: population / size };
 }
 const clientRows = [

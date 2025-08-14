@@ -1,12 +1,19 @@
 'use client';
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import useProfile from '../hooks/useProfile';
 
 export default function Home() {
   const router = useRouter();
+  const {token, userDetails}=useProfile();
 
   useEffect(() => {
-    router.push('/dashboard');
+    if(token)
+    {
+      router.push("/dashboard")
+    }else{
+      router.push("/login")
+    }
   }, [router]);
 
   return (
